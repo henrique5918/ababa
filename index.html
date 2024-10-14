@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Encontre os melhores livros de desenvolvimento e design na Biblioteca de Livros.">
+  <title>Biblioteca de Livros</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      background: linear-gradient(135deg, #2c003e, #4e1f7e);
+      color: white; /* Update text color for better contrast */
+    }
+    .cabeçalho, .rodapé {
+      background: rgba(0, 0, 0, 0.8); /* Dark background for header and footer */
+    }
+  </style>
+</head>
+
+<body>
+  <header class="cabeçalho">
+    <div class="container">
+      <input type="checkbox" id="menu" class="container__botao">
+      <label for="menu" class="container__rotulo">
+        <span class="cabeçalho__menu-hamburguer container__imagem"></span>
+      </label>
+      <nav class="lista-menu">
+        <li class="lista-menu__titulo">Categorias</li>
+        <li class="lista-menu__item"><a href="#" class="lista-menu__link">Programação</a></li>
+        <li class="lista-menu__item"><a href="#" class="lista-menu__link">Front-end</a></li>
+        <li class="lista-menu__item"><a href="#" class="lista-menu__link">Infraestrutura</a></li>
+        <li class="lista-menu__item"><a href="#" class="lista-menu__link">Business</a></li>
+        <li class="lista-menu__item"><a href="#" class="lista-menu__link">Design & UX</a></li>
+      </nav>
+      <img src="img/Logo.svg" alt="Logo da Biblioteca de Livros" class="container__imagem">
+      <h1 class="container__titulo"><b class="container__titulo--negrito">Biblioteca</b> de Livros</h1>
+
+      <ul class="opções">
+        <input type="checkbox" id="opções-menu" class="opções__botão" />
+        <label for="opções-menu" class="opções__rotulo">
+          <li class="opções__item">Categorias</li>
+        </label>
+        <ul class="lista-menu">
+          <li class="lista-menu__item"><a href="#" class="lista-menu__link">Programação</a></li>
+          <li class="lista-menu__item"><a href="#" class="lista-menu__link">Front-end</a></li>
+          <li class="lista-menu__item"><a href="#" class="lista-menu__link">Infraestrutura</a></li>
+          <li class="lista-menu__item"><a href="#" class="lista-menu__link">Business</a></li>
+          <li class="lista-menu__item"><a href="#" class="lista-menu__link">Design & UX</a></li>
+        </ul>
+        <li class="opções__item"><a href="#" class="opções__link">Favoritos</a></li>
+        <li class="opções__item"><a href="#" class="opções__link">Minha estante</a></li>
+      </ul>
+    </div>
+    <div class="container">
+      <a href="#"><img src="img/Favoritos.svg" alt="Meus favoritos" class="container__imagem container__imagem-transparente"></a>
+      <a href="#" class="container__link">
+        <img src="img/Compras.svg" alt="Carrinho de compras" class="container__imagem">
+        <p class="container__texto">Minha sacola</p>
+      </a>
+      <a href="#" class="container__link">
+        <img src="img/Usuario.svg" alt="Meu perfil" class="container__imagem">
+        <p class="container__texto">Meu perfil</p>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="banner">
+      <h2 class="banner__titulo">Já sabe por onde começar?</h2>
+      <p class="banner__texto">Encontre em nossa estante o que precisa para seu desenvolvimento!</p>
+      <input type="search" class="banner__pesquisa" placeholder="Qual será sua próxima leitura?">
+    </section>
+
+    <section class="carrossel">
+      <h2 class="carrossel__titulo">Novos lançamentos</h2>
+      <div class="carrossel__container">
+        <div class="swiper">
+          <div class="swiper-pagination"></div>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="img/ApacheKafka.svg" alt="Livro sobre apache kafka e spring boot da biblioteca de livros"></div>
+            <div class="swiper-slide"><img src="img/Liderança.svg" alt="Livro sobre liderança em design da biblioteca de livros"></div>
+            <div class="swiper-slide"><img src="img/Javascript.svg" alt="Livro sobre javascript assertivo da biblioteca de livros"></div>
+            <div class="swiper-slide"><img src="img/Guia Front-end.svg" alt="Livro Guia front end" /></div>
+            <div class="swiper-slide"><img src="img/Portugol.svg" alt="Livro sobre portugol" /></div>
+            <div class="swiper-slide"><img src="img/Acessibilidade.svg" alt="Livro sobre acessibilidade" /></div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Additional sections go here -->
+
+  </main>
+
+  <footer class="rodapé">
+    <h2 class="rodapé__titulo">Grupo Alura</h2>
+    <!-- Footer content goes here -->
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const swiper = new Swiper(".swiper", {
+        spaceBetween: 10,
+        slidesPerView: 3,
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',
+        },
+      });
+    });
+  </script>
+</body>
+
+</html>
